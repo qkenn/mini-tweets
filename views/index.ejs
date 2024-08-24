@@ -8,8 +8,15 @@
   <body>
     <ul>
       <% tweets.forEach(tweet => { %>
-      <li><%= tweet.content %></li>
+      <li>
+        <%= tweet.content %> by <%= tweet.author %> created at: <%=
+        tweet.created_at %>
+      </li>
       <% }) %>
     </ul>
+
+    <div>
+      <a href="/new">create new</a>
+    </div>
   </body>
 </html>
