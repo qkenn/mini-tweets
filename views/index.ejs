@@ -9,8 +9,10 @@
     <ul>
       <% tweets.forEach(tweet => { %>
       <li>
-        <%= tweet.content %> by <%= tweet.author %> created at: <%=
-        tweet.created_at %>
+        <span
+          ><%= tweet.content %> by <%= tweet.author %> created at: <%=
+          tweet.created_at %></span
+        ><a href="/tweet/<%= tweet.id %>">more details</a>
       </li>
       <% }) %>
     </ul>

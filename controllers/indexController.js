@@ -44,4 +44,12 @@ const createTweet = (req, res) => {
   res.redirect('/');
 };
 
-module.exports = { getIndex, getTweetForm, createTweet };
+const getTweet = (req, res) => {
+  const id = req.params.id;
+
+  const seletedTweet = dummyTweets.find((tweet) => tweet.id == id);
+
+  res.render('tweet', { tweet: seletedTweet });
+};
+
+module.exports = { getIndex, getTweetForm, createTweet, getTweet };
